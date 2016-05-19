@@ -1,0 +1,22 @@
+//this query inserts a new member with the 
+//values(memberID,username,password,email,date_posted) into the members table
+
+	INSERT INTO members VALUES (NULL, 'Bola', 'techbola', 'bfagbowore@gmail.com', '19-05-2016');
+
+//this query inserts a new post added by a member with the 
+//values(threadID,memberID,thread_topic,text_post,date_posted) into the posts table
+
+	INSERT INTO posts VALUES (NULL, 1, 'Computer Programming', 'PHP is a better programming language compared to RUBY', '19-05-2016');
+
+//this query inserts a new reply by a member to a post with the 
+//values(id,threadID,memberID,reply,date_replied) into the replies table
+
+	INSERT INTO replies VALUES (NULL, 1, 1, 'I agree with that', '19-05-2016');
+
+//this query selects all text_posts made by the first member 
+
+	SELECT text_post FROM posts WHERE memberID = 1;
+
+//this query deletes the first post in the posts table
+
+	DELETE FROM posts WHERE threadID = 1;
